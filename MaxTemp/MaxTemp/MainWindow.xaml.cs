@@ -42,7 +42,32 @@ namespace MaxTemp
 
 
             //In einer Schleife die Werte holen und auswerten. Den größten Wert "merken".
+            /* Edit by mahu (Bubblesort)
+            double[] FileTempsSort = FileTemps;
+            public double[] SortArray(FileTempsSort)
+            {
+              var n = FileTempsSort.Length;
+              bool swapRequired;
 
+                for (int i = 0; i < n - 1; i++) 
+                {
+                    swapRequired = false;
+
+                    for (int j = 0; j < n - i - 1; j++)
+                    if (FileTempsSort[j] > FileTempsSort[j + 1])
+                       {
+                        var tempVar = FileTempsSort[j];
+                        FileTempsSort[j] = FileTempsSort[j + 1];
+                        FileTempsSort[j + 1] = tempVar;
+                        swapRequired = true;
+                        }
+                    if (swapRequired == false)
+                    break;
+                }       
+
+                return FileTempsSort;
+            }
+            */
 
             //Datei wieder freigeben.
 
