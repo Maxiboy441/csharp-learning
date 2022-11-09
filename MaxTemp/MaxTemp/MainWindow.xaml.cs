@@ -37,6 +37,12 @@ namespace MaxTemp
         private void BtnAuswerten_Click(object sender, RoutedEventArgs e)
         {
             //Zugriff auf Datei erstellen.
+            string[] File = File.ReadAllLines("./temps.csv");
+
+            string[] FileStrings = File.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+
+            string[] FileValues = FileStrings.Split(new string[] { "," }, StringSplitOptions.None);
+
 
             //Anfangswert setzen, um sinnvoll vergleichen zu können.
 
