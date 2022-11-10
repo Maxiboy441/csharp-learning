@@ -42,6 +42,22 @@ namespace MaxTemp
             string[] FileStrings = File.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
             string[] FileValues = FileStrings.Split(new string[] { "," }, StringSplitOptions.None);
+            
+            
+            for (int i = 0; i < FileValues.Length; i++)
+            {
+                if (i % 3 == 0)
+                {
+                    string[] FileTempsString = FileValues[i];
+                }
+            }
+
+            double[] FileTemps = Array.ConvertAll(strings, FileTemps => double.Parse(s));
+            if (FileTemps.Length != 4)
+            {
+                throw new Exception("Error");
+            }
+
 
 
             //Anfangswert setzen, um sinnvoll vergleichen zu können.
