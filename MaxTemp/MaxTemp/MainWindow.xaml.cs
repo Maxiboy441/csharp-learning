@@ -64,14 +64,14 @@ namespace MaxTemp
 
 
             //In einer Schleife die Werte holen und auswerten. Den größten Wert "merken".
-            /* Edit by mahu (Bubblesort)
+            // Edit by mahu (Bubblesort)
             double[] FileTempsSort = FileTemps;
             public double[] SortArray(FileTempsSort)
             {
               var n = FileTempsSort.Length;
               bool swapRequired;
 
-                for (int i = 0; i < n - 1; i++) 
+                for (int i = 0; i < n - 1; i++) {
                 {
                     swapRequired = false;
 
@@ -85,11 +85,15 @@ namespace MaxTemp
                         }
                     if (swapRequired == false)
                     break;
+                    }
                 }       
 
                 return FileTempsSort;
             }
-            */
+            var IndexHighestTemp = FileValues.IndexOf(FileTempsSort[FiletempsSort.Length - 1]);
+            
+            var date = FileValues[IndexHighestTemp - 1];
+            var location = FileValues[IndexHighestTemp - 2];
 
             //Datei wieder freigeben.
 
