@@ -90,6 +90,7 @@ namespace MaxTemp
 
                 return FileTempsSort;
             }
+            SortArray(FileTempsSort);
             var IndexHighestTemp = FileValues.IndexOf(FileTempsSort[FiletempsSort.Length - 1]);
             
             var date = FileValues[IndexHighestTemp - 1];
