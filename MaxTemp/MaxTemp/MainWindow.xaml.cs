@@ -68,7 +68,10 @@ namespace MaxTemp
 
                 return FileTempsSort;
             }
+            var IndexHighestTemp = FileValues.IndexOf(FileTempsSort[0])
             
+            var date = FileValues[IndexHighestTemp - 1];
+            var location = FileValues[IndexHighestTemp - 2];
 
             //Datei wieder freigeben.
 
