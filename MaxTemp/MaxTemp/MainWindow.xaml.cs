@@ -56,19 +56,12 @@ namespace MaxTemp
             }
 
 
-            //Anfangswert setzen, um sinnvoll vergleichen zu können.
-
-
-            //In einer Schleife die Werte holen und auswerten. Den größten Wert "merken".
-            // Edit by mahu (Bubblesort)
-
-            //Datei wieder freigeben.
-
-
-            //Höchstwert auf Oberfläche ausgeben.
+            
             lblAusgabe.Content = temp.ToString();
-            MessageBox.Show("Gleich kachelt das Programm...");
-            //kommentieren Sie die Exception aus.
+            if(temp > 40)
+            {
+                MessageBox.Show("ALARM");
+            }
 
         }
     }
