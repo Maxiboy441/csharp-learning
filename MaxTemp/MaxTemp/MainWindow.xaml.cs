@@ -37,27 +37,23 @@ namespace MaxTemp
         private void BtnAuswerten_Click(object sender, RoutedEventArgs e)
         {
             //Zugriff auf Datei erstellen.
-            string[] File = File.ReadAllLines("./temps.csv");
+            string[] file = File.ReadAllLines("./temps.csv");
+            string[] values;
+            double temp = 0;
+            int index = 0;
 
-            string[] FileStrings = File.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
-            string[] FileValues = FileStrings.Split(new string[] { "," }, StringSplitOptions.None);
-            
-            
-            for (int i = 0; i < FileValues.Length; i++)
+            for (int i = 0; i < file.Length; i++)
             {
-                if (i % 3 == 0)
+                values = file[i].Split(new string[] { "," }, StringSplitOptions.None);
+                double value = Double.Parse(values[2], CultureInfo.InvariantCulture);
+
+                if (value > temp)
                 {
-                    string[] FileTempsString = FileValues[i];
+                    temp = Convert.ToDouble(values[2], CultureInfo.InvariantCulture);
+                    index = i + 1;
                 }
             }
-
-            double[] FileTemps = Array.ConvertAll(strings, FileTemps => double.Parse(s));
-            if (FileTemps.Length != 4)
-            {
-                throw new Exception("Error");
-            }
-
 
 
             //Anfangswert setzen, um sinnvoll vergleichen zu können.
@@ -65,45 +61,15 @@ namespace MaxTemp
 
             //In einer Schleife die Werte holen und auswerten. Den größten Wert "merken".
             // Edit by mahu (Bubblesort)
-            double[] FileTempsSort = FileTemps;
-            double[] SortArray(double[] FileTempsSort)
-            {
-              var n = FileTempsSort.Length;
-              bool swapRequired;
-
-                for (int i = 0; i < n - 1; i++) {
-                {
-                    swapRequired = false;
-
-                    for (int j = 0; j < n - i - 1; j++)
-                    if (FileTempsSort[j] > FileTempsSort[j + 1])
-                       {
-                        var tempVar = FileTempsSort[j];
-                        FileTempsSort[j] = FileTempsSort[j + 1];
-                        FileTempsSort[j + 1] = tempVar;
-                        swapRequired = true;
-                        }
-                    if (swapRequired == false)
-                    break;
-                    }
-                }       
-
-                return FileTempsSort;
-            }
-            SortArray(FileTempsSort);
-            var IndexHighestTemp = FileValues.IndexOf(FileTempsSort[FiletempsSort.Length - 1]);
-            
-            var date = FileValues[IndexHighestTemp - 1];
-            var location = FileValues[IndexHighestTemp - 2];
 
             //Datei wieder freigeben.
 
 
             //Höchstwert auf Oberfläche ausgeben.
-
+            lblAusgabe.Content = temp.ToString();
             MessageBox.Show("Gleich kachelt das Programm...");
             //kommentieren Sie die Exception aus.
-            throw new Exception("peng");
+
         }
     }
 }
