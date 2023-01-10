@@ -9,8 +9,8 @@
     <Viewbox>
         <Grid Background="Silver">
             <TextBox HorizontalAlignment="Left" Background= "WhiteSmoke" Height="60" Margin="14,50,0,0" BorderThickness="3" BorderBrush="DarkGray" TextWrapping="Wrap"
-                Text="FIle name: " FontSize="18" VerticalAlignment="Top" Width="835" Name ="FileNameTextBox" Grid.ColumnSpan="3"/>
-            <Button x:Name="btnAuswerten" Content="Auswerten" Background="LightBlue" FontSize="18" HorizontalAlignment="Left" Margin="887,60,0,0" VerticalAlignment="Top" Width="121" Click="BtnAuswerten_Click" RenderTransformOrigin="1.047,0.821" Height="40" Grid.Column="2"/>
+                Text="File name: " FontSize="18" VerticalAlignment="Top" Width="835" Name ="FileNameTextBox" Grid.ColumnSpan="3"/>
+            <Button Name="btnAuswerten" Content="Auswerten" Background="LightBlue" FontSize="18" HorizontalAlignment="Left" Margin="887,60,0,0" VerticalAlignment="Top" Width="121" Click="btnAuswerten_Click" RenderTransformOrigin="1.047,0.821" Height="40" Grid.Column="2"/>
             <TextBox HorizontalAlignment="Left" Background= "WhiteSmoke" Height="533" Margin="14,169,0,0" BorderThickness="3" BorderBrush="DarkGray" TextWrapping="Wrap"
                 Text="File Inhalt: " FontSize="18" VerticalAlignment="Top" Width="537" Name ="txtInhalt" Grid.Column="2" />
             <TextBox Background="WhiteSmoke" Name="txtMax" FontSize="18" TextWrapping="Wrap" Text="Max Temperatur: " BorderBrush="DarkGray" BorderThickness="3"  Margin="610,169,237,479" RenderTransformOrigin="0.569,-2.699" Grid.Column="2" />
@@ -19,9 +19,9 @@
             <TextBox Background="WhiteSmoke" Name="txtMin" FontSize="18" TextWrapping="Wrap" Text="Min Temperatur: " BorderBrush="DarkGray" BorderThickness="3" Margin="610,467,236,120" RenderTransformOrigin="0.569,-2.699" />
 
 
-            <Button Name="btnMAx" Content="Max" Background="LightBlue" FontSize="18" HorizontalAlignment="Left" Margin="887,304,77,478" VerticalAlignment="Top" Width="121" Click="BtnAuswerten_Click" RenderTransformOrigin="1.047,0.821" Height="40" Grid.Column="2"/>
+            <Button Name="btnMAx" Content="Max" Background="LightBlue" FontSize="18" HorizontalAlignment="Left" Margin="887,304,77,478" VerticalAlignment="Top" Width="121" Click="btnMax_Click" RenderTransformOrigin="1.047,0.821" Height="40" Grid.Column="2"/>
 
-            <Button Name="btnMin" Content="Min" Background="LightBlue" FontSize="18" HorizontalAlignment="Left" Margin="887,662,77,120" VerticalAlignment="Top" Width="121" Click="BtnAuswerten_Click" RenderTransformOrigin="1.047,0.821" Height="40" Grid.Column="2"/>
+            <Button Name="btnMin" Content="Min" Background="LightBlue" FontSize="18" HorizontalAlignment="Left" Margin="887,662,77,120" VerticalAlignment="Top" Width="121" Click="btnMin_Click" RenderTransformOrigin="1.047,0.821" Height="40" Grid.Column="2"/>
         </Grid>
     </Viewbox>
 </Window>
